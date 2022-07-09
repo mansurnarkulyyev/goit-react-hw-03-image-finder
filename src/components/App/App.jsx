@@ -84,15 +84,14 @@ export class App extends Component {
   onLoadMore = () => {
     this.setState(({ page }) => ({
       page: page + 1,
-      isLoading: true,
     }));
   };
 
   toggleModal = largeImageURL => {
     this.setState(({ showModal }) => ({
       showModal: !showModal,
+      largeImageURL: largeImageURL,
     }));
-    this.setState({ largeImageURL: largeImageURL });
   };
 
   render() {
